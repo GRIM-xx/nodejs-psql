@@ -8,7 +8,7 @@ const App = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch("${import.meta.env.VITE_API_URL}/users") // http://localhost:3000/users
+    fetch(`${import.meta.env.VITE_API_URL}/users`) // http://localhost:3000/users
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error("Error fetching users:", err));
