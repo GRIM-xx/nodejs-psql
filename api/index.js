@@ -8,7 +8,9 @@ const app = express();
 const port = 3000;
 
 // Enable CORS (important for React)
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 
 const pool = new Pool({
   user: process.env.DB_USER,
